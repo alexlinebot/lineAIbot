@@ -28,14 +28,13 @@ def handle_message(event):
    if  mtext.startswith('@小仙僮'):
        try:
            reply = chatwithpdf.chatpdf(mtext)
-           print(reply)
            message = TextSendMessage(
                text = reply
            )
            line_bot_api.reply_message(event.reply_token, message)
        except:
            line_bot_api.reply_message(event.reply_token,
-               TextSendMessage(text= 'Sorry 屁桃故障囉！'))
+               TextSendMessage(text= 'Sorry 故障囉！'))
 
 if __name__ == '__main__':
    app.run()
