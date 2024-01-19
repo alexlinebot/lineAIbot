@@ -38,4 +38,5 @@ def handle_message(event):
                TextSendMessage(text= 'Sorry 故障囉！'))
 
 if __name__ == '__main__':
-   app.run()
+   
+    app.run(host='0.0.0.0', port=5000)
